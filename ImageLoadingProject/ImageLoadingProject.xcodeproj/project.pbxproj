@@ -15,6 +15,7 @@
 		AEF3A31B2562D706007CCD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF3A3192562D706007CCD92 /* LaunchScreen.storyboard */; };
 		AEF3A3242562DBB3007CCD92 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3A3232562DBB3007CCD92 /* ImageCell.swift */; };
 		AEF3A3282562E4D4007CCD92 /* URLDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3A3272562E4D4007CCD92 /* URLDetailsViewController.swift */; };
+		ED282DB72572BBD000D8C8A3 /* LargeImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED282DB62572BBD000D8C8A3 /* LargeImageDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AEF3A31C2562D706007CCD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEF3A3232562DBB3007CCD92 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		AEF3A3272562E4D4007CCD92 /* URLDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDetailsViewController.swift; sourceTree = "<group>"; };
+		ED282DB62572BBD000D8C8A3 /* LargeImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeImageDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				AEF3A3172562D706007CCD92 /* Assets.xcassets */,
 				AEF3A3192562D706007CCD92 /* LaunchScreen.storyboard */,
 				AEF3A31C2562D706007CCD92 /* Info.plist */,
+				ED282DB62572BBD000D8C8A3 /* LargeImageDetailViewController.swift */,
 			);
 			path = ImageLoadingProject;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				AEF3A30F2562D705007CCD92 /* AppDelegate.swift in Sources */,
 				AEF3A3112562D705007CCD92 /* SceneDelegate.swift in Sources */,
 				AEF3A3282562E4D4007CCD92 /* URLDetailsViewController.swift in Sources */,
+				ED282DB72572BBD000D8C8A3 /* LargeImageDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        rows.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,16 +40,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             fatalError("Could not dequeue cell")
         }
 
-        cell.title = "Guinea pig"
-        cell.imageUrl = URL(string: "https://news.clas.ufl.edu/files/2020/06/AdobeStock_345118478-copy-1440x961-1.jpg")
+        switch rows[indexPath.row] {
+        case .image(title: let title, urlString: let urlString):
+            cell.title = title
+            cell.imageUrl = URL(string: urlString)
+        case .largeImage(title: let title, previewUrlString: let previewUrlString, urlString: _):
+            cell.title = title
+            cell.imageUrl = URL(string: previewUrlString)
+        default:
+            return UITableViewCell()
+        }
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let detailsViewController = URLDetailsViewController()
-        detailsViewController.pageUrl = URL(string: "https://news.clas.ufl.edu/uncovering-the-origin-of-the-domesticated-guinea-pig/")
-        navigationController?.pushViewController(detailsViewController, animated: true)
+                
+        switch rows[indexPath.row] {
+        case .largeImage(title: _, previewUrlString: _, urlString: let urlString):
+            guard let largeImageDetailViewController: LargeImageDetailViewController = storyboard?.instantiateViewController(identifier: "LargeImageDetailViewController") else {
+                return
+            }
+            largeImageDetailViewController.imageSource = urlString
+            navigationController?.pushViewController(largeImageDetailViewController, animated: true)
+        default:
+            return
+        }
     }
 }
 

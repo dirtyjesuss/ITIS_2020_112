@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1LH-17-Cbb">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,31 +14,31 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageLoadingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z22-gs-oMl">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="261" id="mcK-wh-PsT" customClass="ImageCell" customModule="ImageLoadingProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="261"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="261"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mcK-wh-PsT" id="WFf-8y-1V3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="261"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="261"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FFF-gC-Xkk">
-                                                    <rect key="frame" x="20" y="11" width="374" height="239"/>
+                                                    <rect key="frame" x="20" y="11" width="335" height="239"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxR-lo-f2p">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="42.666666666666664"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5EJ-hY-s8J">
-                                                            <rect key="frame" x="0.0" y="28.5" width="374" height="210.5"/>
+                                                            <rect key="frame" x="0.0" y="50.666666666666671" width="335" height="188.33333333333331"/>
                                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="5EJ-hY-s8J" secondAttribute="height" multiplier="16:9" id="tuc-vp-V85"/>
@@ -81,42 +81,58 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Large Image Detail View Controller-->
         <scene sceneID="Wr0-Tm-aVR">
             <objects>
-                <viewController id="eTA-u5-l1M" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LargeImageDetailViewController" id="eTA-u5-l1M" customClass="LargeImageDetailViewController" customModule="ImageLoadingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t6d-wO-gnr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8df-gI-dNw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="Syt-OZ-dRL"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="c0r-5w-qwb"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHs-8l-Uoh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sTj-bz-lag">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sTj-bz-lag" firstAttribute="top" secondItem="eHs-8l-Uoh" secondAttribute="top" id="8TQ-JN-edh"/>
+                                    <constraint firstItem="sTj-bz-lag" firstAttribute="centerX" secondItem="eHs-8l-Uoh" secondAttribute="centerX" id="Fob-mo-PTu"/>
+                                    <constraint firstAttribute="trailing" secondItem="sTj-bz-lag" secondAttribute="trailing" id="Hfw-X4-Ijb"/>
+                                    <constraint firstItem="sTj-bz-lag" firstAttribute="leading" secondItem="eHs-8l-Uoh" secondAttribute="leading" id="VSo-6U-JJx"/>
+                                    <constraint firstItem="sTj-bz-lag" firstAttribute="centerY" secondItem="eHs-8l-Uoh" secondAttribute="centerY" id="Xqk-gz-SEx"/>
+                                    <constraint firstAttribute="bottom" secondItem="sTj-bz-lag" secondAttribute="bottom" id="aEH-na-yvU"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="DLW-UR-bjK"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="iMt-yh-dQ9"/>
                             </scrollView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-ra-sE0">
-                                <rect key="frame" x="132" y="446" width="150" height="4"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-ra-sE0">
+                                <rect key="frame" x="112.66666666666669" y="404" width="150" height="4"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="OPL-QJ-wh0"/>
                                     <constraint firstAttribute="width" constant="150" id="igA-g4-k4t"/>
                                 </constraints>
                             </progressView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="cCS-mO-KWq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8df-gI-dNw" firstAttribute="bottom" secondItem="cCS-mO-KWq" secondAttribute="bottom" id="3Qu-Fl-Huq"/>
+                            <constraint firstItem="eHs-8l-Uoh" firstAttribute="top" secondItem="t6d-wO-gnr" secondAttribute="top" id="3It-6N-5xV"/>
                             <constraint firstItem="d0h-ra-sE0" firstAttribute="centerX" secondItem="t6d-wO-gnr" secondAttribute="centerX" id="B94-d8-MdM"/>
-                            <constraint firstItem="8df-gI-dNw" firstAttribute="top" secondItem="cCS-mO-KWq" secondAttribute="top" id="Bby-QX-tFj"/>
-                            <constraint firstItem="8df-gI-dNw" firstAttribute="trailing" secondItem="cCS-mO-KWq" secondAttribute="trailing" id="Xk0-hO-yLi"/>
-                            <constraint firstItem="8df-gI-dNw" firstAttribute="leading" secondItem="cCS-mO-KWq" secondAttribute="leading" id="XnK-W5-UJF"/>
+                            <constraint firstAttribute="bottom" secondItem="eHs-8l-Uoh" secondAttribute="bottom" id="KfM-fU-Zeh"/>
+                            <constraint firstItem="eHs-8l-Uoh" firstAttribute="leading" secondItem="t6d-wO-gnr" secondAttribute="leading" id="Oy0-Pf-ZK2"/>
+                            <constraint firstAttribute="trailing" secondItem="eHs-8l-Uoh" secondAttribute="trailing" id="emY-J5-zg1"/>
                             <constraint firstItem="d0h-ra-sE0" firstAttribute="centerY" secondItem="t6d-wO-gnr" secondAttribute="centerY" id="zJF-rT-SE7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="largeImageView" destination="sTj-bz-lag" id="oER-Af-GLU"/>
+                        <outlet property="progressView" destination="d0h-ra-sE0" id="X0y-0Y-dFN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCO-s5-MPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000.0000000000002" y="93.75"/>
+            <point key="canvasLocation" x="1999.2" y="93.103448275862078"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BAZ-z6-wDF">
@@ -124,7 +140,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1LH-17-Cbb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="enz-6a-dEw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
